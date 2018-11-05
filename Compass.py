@@ -20,10 +20,10 @@ heading = 0.0
 print('Printing accelerometer & magnetometer X, Y, Z axis values, press Ctrl-C to quit...')
 
 maxheading = 0.0
-minheading =360.0
+minheading = 360.0
 #runtimer = 0.0
 
-t_end = time.time() + 60*1;
+t_end = time.time() + 20*1;
 
 while time.time() < t_end:
     # Read the X, Y, Z axis acceleration values and print them.
@@ -64,7 +64,7 @@ print("/n/n/nTHE CALIBRATION PERIOD IS COMPLETE.  IT IS NOW TIME FOR REAL MEASUR
 time.sleep(2);
     
 # We will now calculate the scale factor.
-scalefactor = 360/(maxheading-minheading);
+scalefactor = 360 / (maxheading - minheading);
 
 #We will now output actual headings.
 
@@ -102,4 +102,5 @@ def getHeading():
     print("Compass Heading: ");
     #Serial.println("Heading x: ",headingx,"Heading y:" headingy,"Heading z:" headingz);
     print(heading);
+    return heading
    
