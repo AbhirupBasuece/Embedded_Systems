@@ -9,5 +9,9 @@ import Compass
 while 1:
 	angle = Compass.getHeading()
 	print ("HEADING: %5.2f" % (angle))
+	#GimbalController.panGimbal(180)
+	#GimbalController.tiltGimbal(45)
 	time.sleep(0.05)
-	
+
+#GimbalController.resetGimbal()
+#GPIO.cleanup()
